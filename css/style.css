@@ -1,0 +1,55 @@
+@font-face
+{
+    font-family: raleway-Regular ;
+    src: url('./static/Raleway-Regular.ttf') format('truetype');
+}
+
+*
+{
+    font-family: raleway-regular;
+}
+
+#logo
+{
+    margin: 20px;
+}
+body
+{
+    margin: 0px;
+}
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.nav-item
+{
+    padding: 20px;
+}
+
+footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkgrey;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+ul
+{
+    margin: 0px;
+    padding-left: 0px ;
+}
+
+.footer-column
+{
+    width: 33%;
+}
