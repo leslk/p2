@@ -1,22 +1,37 @@
+/* FONT */ 
+
 @font-face
 {
-    font-family: raleway-Regular ;
+    font-family: raleway-regular;
     src: url('./static/Raleway-Regular.ttf') format('truetype');
 }
+
+@font-face 
+{
+    font-family: raleway-bold;
+    src: url('./static/Raleway-Bold.ttf') format('truetype');
+}
+
+/* GLOBAL */
 
 *
 {
     font-family: raleway-regular;
+    font-size: 12px;
 }
+
+body
+{
+    margin: 20px;
+}
+
+/* NAV-BAR */
 
 #logo
 {
     margin: 20px;
 }
-body
-{
-    margin: 0px;
-}
+
 nav
 {
     display: flex;
@@ -25,17 +40,182 @@ nav
     flex-wrap: wrap;
 }
 
-
 .nav-item
 {
     padding: 20px;
+    margin-right: 20px;
 }
+
+#searchbar
+{
+    display: flex; 
+}
+
+#map-icon
+{
+    background-color: #F0F0F0;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.field
+{
+    padding : 5px;
+    height : 22px;
+    border: 1px solid #F0F0F0;
+}
+.button
+{
+    font-family: raleway-regular;
+    background-color: #0065FC;
+    color: white;
+    height: 34px;
+    border: 0;
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* FILTER */
+
+#filter
+{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 30px 30px 30px 0px;
+    
+}
+
+.filter-type
+{
+   padding: 0px 20px 0px 30px;
+   border: 2px solid #F0F0F0;
+   border-radius: 20px;
+
+}
+
+/* MAIN */
+
+main
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-title
+{
+    font-weight: bold;
+    padding: 20px;
+}
+section
+{
+    width: 60%;
+    background-color: #F0F0F0;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.accomodation
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.marseille-card
+{
+    background-color: white;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 20px;
+}
+.card-img-top
+{
+    width: 250px;
+    height: 100px;
+    border-radius: 18px 18px 0px 0px;
+}
+
+.card-info
+{
+    background-color: white;
+    padding: 10px;
+
+}
+
+.fa-star
+{
+    font-size: 10px;
+}
+
+.blue-icon
+{
+    color: #0065FC;
+    height: 5px;
+}
+
+.grey-icon
+{
+    color: #F0F0F0;
+}
+
+h3
+{
+    font-size: 14px;
+    font-family: raleway-bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+h4
+{
+    margin: 20px;
+}
+ .price
+ {
+     margin: 2px;
+ }
+
+aside
+{
+    width: 25%;
+    background-color: #F0F0F0;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card
+{
+    display: flex;
+    background-color: white;
+    margin: 20px;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+.card-img-left
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+/* FOOTER */
 
 footer
 {
     display: flex;
-    flex-wrap: wrap;
     background-color: darkgrey;
+}
+
+.footer-column
+{
+    width: 33%;
+    margin: 30px;
 }
 
 li
@@ -49,7 +229,38 @@ ul
     padding-left: 0px ;
 }
 
-.footer-column
+.nav-item
 {
-    width: 33%;
+    text-decoration: none;
+    color: initial;
+}
+
+.nav-item:hover
+{
+    color: #0065FC;
+    border-top: 2px solid #0065FC ;
+}
+
+
+
+/* MOBILE RESOLUTION */
+@media screen and (max-width: 768px)
+{
+    footer
+    {
+        flex-flow: wrap column;
+        align-items: center;
+        padding: 30px 0px 30px 0px;
+    }
+
+    nav 
+    {
+        flex-flow: wrap column;
+    }
+
+    .footer-column
+    {
+        width: 100%;
+        margin: 0px 0px 0px 30px;
+    }
 }
