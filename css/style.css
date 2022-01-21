@@ -22,13 +22,31 @@
 
 body
 {
-    margin: 20px;
+    margin: 0px;
+}
+
+.bloc
+{
+    margin: 30px;
+}
+
+a
+{
+    text-decoration: none;
+    color: initial;
+}
+
+/* HEADER */
+
+header
+{
+    margin: 0px 30px 30px 30px;
 }
 
 /* NAV-BAR */
 
 #logo
-{
+{   
     margin: 20px;
 }
 
@@ -38,22 +56,31 @@ nav
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .nav-item
 {
+    /* padding: 40px 20px 20px 20px; */
     padding: 20px;
     margin-right: 20px;
+}
+
+.nav-item:hover
+{
+    color: #0065FC;
+    border-top: 2px solid #0065FC ;
 }
 
 #searchbar
 {
     display: flex; 
+    margin: 10px 10px 10px 0px;
 }
 
 #map-icon
 {
-    background-color: #F0F0F0;
+    background-color: #f2f2f2;
     width: 30px;
     display: flex;
     justify-content: center;
@@ -63,11 +90,11 @@ nav
 
 .field
 {
-    padding : 5px;
+    padding : 5px 30px 5px 5px;
     height : 22px;
     border: 1px solid #F0F0F0;
 }
-.button
+.button-search-text
 {
     font-family: raleway-regular;
     background-color: #0065FC;
@@ -81,19 +108,60 @@ nav
 
 #filter
 {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-    margin: 30px 30px 30px 0px;
-    
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 20px 10px 0px;
 }
 
 .filter-type
 {
-   padding: 0px 20px 0px 30px;
-   border: 2px solid #F0F0F0;
-   border-radius: 20px;
+   border: 2px solid #f2f2f2;
+   border-radius : 18px;
+   padding-right: 30px;
+   margin: 10px;
+   font-family: raleway-bold;
+}
 
+.filter-type:hover
+{
+    box-shadow: 0 4px 8px 0 silver;
+}
+
+#filter-title
+{
+    font-family: raleway-bold;
+}
+
+
+.blue-icon-filter
+{
+    font-size: 12px;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* info */
+
+#info
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+#info-icon
+{
+    color: #0065FC;
+    border: 2px solid #f2f2f2;
+    border-radius: 20px;
+    padding: 8px 10px 8px 10px;
+    margin-right: 20px;
 }
 
 /* MAIN */
@@ -101,7 +169,8 @@ nav
 main
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main-title
@@ -109,11 +178,11 @@ main
     font-weight: bold;
     padding: 20px;
 }
-section
+
+#accomodation-bloc
 {
     width: 60%;
-    background-color: #F0F0F0;
-    margin: 20px;
+    background-color: #f2f2f2;
     padding: 20px;
     border-radius: 20px;
 }
@@ -127,10 +196,13 @@ section
 
 .marseille-card
 {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 4px;
-    margin: 5px;
+    margin: 8px;
     border-radius: 20px;
+    box-shadow: 0 4px 8px 0 silver;
 }
 .card-img-top
 {
@@ -143,7 +215,14 @@ section
 {
     background-color: white;
     padding: 10px;
+    border-radius: 0px 0px 18px 18px;
 
+}
+
+.card-info h3
+{
+    font-size: 12px;
+    margin-bottom: 5px;
 }
 
 .fa-star
@@ -159,12 +238,12 @@ section
 
 .grey-icon
 {
-    color: #F0F0F0;
+    color: #f2f2f2;
 }
 
 h3
 {
-    font-size: 14px;
+    font-size: 16px;
     font-family: raleway-bold;
     margin: 0px;
     padding: 0px;
@@ -176,46 +255,122 @@ h4
 }
  .price
  {
-     margin: 2px;
+     margin: 2px 2px 2px 0px;
  }
+
+/* POPULAR ACCOMODATION*/
 
 aside
 {
-    width: 25%;
-    background-color: #F0F0F0;
-    margin: 20px;
+    width: 30%;
+    background-color: #f2f2f2;
     padding: 20px;
     border-radius: 20px;
+}
+
+#popular-title-and-icon
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.black-icon
+{
+    font-size: 16px;
+    padding: 10px;
 }
 
 .card
 {
     display: flex;
+    flex-direction: row;
     background-color: white;
-    margin: 20px;
+    margin: 10px;
     padding: 4px;
     border-radius: 12px;
+    box-shadow: 0 4px 8px 0 silver;
 }
 
 .card-img-left
 {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 110px;
     border-radius: 10px 0px 0px 10px;
 }
 
+/* ACTIVITY */
+
+#activity-bloc
+{
+    margin: 20px;
+}
+.activity
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.activity-card
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 silver;
+}
+
+.x-small-img-activity
+{
+    width:300px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+.small-img-activity
+{
+    width: 300px;
+    height: 180px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.big-img-activity
+{
+    width:300px ;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
 /* FOOTER */
 
 footer
 {
     display: flex;
-    background-color: darkgrey;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f2f2f2;
 }
 
 .footer-column
 {
-    width: 33%;
-    margin: 30px;
+    width: 30%;
+    margin: 20px;
+}
+
+.footer-title
+{
+    margin-bottom: 10px;
+}
+
+.footer-info
+{
+    margin-bottom: 5px;
 }
 
 li
@@ -229,38 +384,182 @@ ul
     padding-left: 0px ;
 }
 
-.nav-item
-{
-    text-decoration: none;
-    color: initial;
-}
-
-.nav-item:hover
-{
-    color: #0065FC;
-    border-top: 2px solid #0065FC ;
-}
-
 
 
 /* MOBILE RESOLUTION */
+
 @media screen and (max-width: 768px)
+
 {
+    *
+    {
+        font-size: 16px;
+    }
+
+    p
+    {
+        margin: 20px;
+    }
+
+
+    .main-title
+    {
+        font-size: 20px;
+        margin: 20px;
+        padding: 0;
+    }
+
+    #main-description
+    {
+        margin: 10px;
+    }
+
+    .bloc
+    {
+        margin: 0;
+    }
+
+    .card-info h3, #footer-title
+    {
+        font-size: 18px;
+    }
+
+    header
+    {
+        justify-content: center;
+        margin: 0;
+    }
+
+    nav
+    {
+        justify-content: center;
+        flex-flow: wrap column;
+        width: 100%;
+    }
+
+    .nav-container
+    {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+    .nav-item
+    {
+        margin: 0px;
+        width: 100%;
+        text-align:  center;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    
+    .nav-item:hover
+    {
+        color: #0065FC;
+        border-bottom: 2px solid #0065FC;
+        border-top: none;
+    }
+
+    .formulaire
+    {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+    #filter
+    {
+        margin: 20px;
+    }
+
+    #filter-title
+    {
+       width: 100%;
+    }
+
+    #info
+    {
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+
+    #accomodation-bloc:nth-child(1)
+    {
+        order: 2;
+        width: 100%;
+        background-color: white;
+        padding: 0;
+    }
+
+    .accomodation
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .marseille-card
+    {
+        height: 100%;
+        margin: 10px;
+    }
+
+    .card-img-top
+    {
+        object-fit: cover;
+        width: auto;
+    }
+
+    aside:nth-child(2)
+    {
+        order: 1;
+        width: 100%;
+        border-radius: 0 0 0 0;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card
+    {
+        height: 150px;
+    }
+
+    .card-img-left
+    {
+        height: auto;
+        object-fit: cover;
+    }
+
+    #activity-bloc
+    {
+        margin: 0;
+    }
+    .activity
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .big-img-activity, .small-img-activity, .x-small-img-activity
+    {
+        width: auto;
+        object-fit: cover;
+        height: 150px;
+    }
+
     footer
     {
         flex-flow: wrap column;
-        align-items: center;
+        justify-content: center;
         padding: 30px 0px 30px 0px;
-    }
-
-    nav 
-    {
-        flex-flow: wrap column;
     }
 
     .footer-column
     {
         width: 100%;
-        margin: 0px 0px 0px 30px;
+        margin: 0px 0px 30px 30px;
     }
+
 }
