@@ -244,7 +244,7 @@ main
 .marseille-card
 {
     display: flex;
-    width: 30%;
+    width: 29%;
     flex-direction: column;
     background-color: white;
     padding: 4px;
@@ -262,6 +262,7 @@ main
 
 .card-info
 {
+    position: relative;
     background-color: white;
     padding: 10px;
     border-radius: 0px 0px 18px 18px;
@@ -351,6 +352,12 @@ aside
     height: 120px;
     object-fit: cover;
     border-radius: 10px 0px 0px 10px;
+}
+
+.stars
+{
+    position: absolute;
+    bottom: 12px;
 }
 
 /* ACTIVITY */
@@ -610,13 +617,14 @@ ul
 
     #info-icon
     {
+        flex-shrink: 0;
         font-size: 12px;
         margin: 0px;
     }
 
     #info p
     {
-        margin: 20px 0px 20px 10px;
+        margin: 20px 10px 20px 10px;
     }
 
     #accomodation-bloc:nth-child(1)
